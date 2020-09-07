@@ -1,3 +1,5 @@
+//**FUNCTIONS, PAGE DONE**//
+
 //Dependencies
 const express = require('express')
 const app = express();

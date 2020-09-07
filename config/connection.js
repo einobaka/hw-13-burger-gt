@@ -1,3 +1,5 @@
+//**FUNCTIONS, PAGE DONE**//
+
 // MySQL connect
 const mysql = require("mysql");
 
