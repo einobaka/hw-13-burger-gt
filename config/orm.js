@@ -4,15 +4,18 @@ const orm = {
 
     selectAll: function (tableInput, cb) {
         const dataq = 'SELECT * FROM ??';
-        connection.query(dataq, [], (err, res) => {
+        connection.query(dataq, [tableInput], (err, res) => {
             if (err) throw err;
-            cb(result);
+            // console.log(res);
+            cb(res);
         });
-
 
     },
 
     insertOne: function () { },
+
+
+
 
     updateOne: function () { },
 
