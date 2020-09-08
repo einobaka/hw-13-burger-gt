@@ -1,4 +1,4 @@
-USE burgers_db;
+USE heroku_b47f60853593882;
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
