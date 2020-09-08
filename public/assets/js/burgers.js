@@ -11,12 +11,11 @@ $(function () {
         $.ajax('/api/burgers/' + id, {
             type: "PUT",
             data: newDevouredStatus
-        }).then(
-            function () {
-                // console.log("changed devoured to", isDevoured);
-                location.reload();
-            }
+        }).then(function () {
+            // console.log("changed devoured to", isDevoured);
+        }
         );
+        location.reload();
     });
 
     $(".create-form").on("submit", function (event) {
@@ -28,17 +27,16 @@ $(function () {
             devoured: $("[name=devoured]:checked").val().trim()
         };
 
-        console.log(newBurger)
+        // console.log(newBurger)
 
         // Send the POST request.
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
-        }).then(
-            function () {
-                // console.log("Added burger");
-                location.reload();
-            }
+        }).then(function () {
+            // console.log("Added burger");
+        }
         );
+        location.reload();
     });
 });
