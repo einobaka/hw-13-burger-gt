@@ -12,9 +12,15 @@ const orm = {
 
     },
 
-    insertOne: function () { },
-
-
+    insertOne: function (table, col, val, cb) {
+        const dataq = `INSERT INTO ${table} (${col}) VALUES ('${val}')`
+        // console.log(dataq);
+        connection.query(dataq, (err, res) => {
+            if (err) throw err;
+            // console.log(res);
+            cb(res);
+        })
+    },
 
 
     updateOne: function () { },

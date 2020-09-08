@@ -1,4 +1,4 @@
-//**FUNCTIONS, PAGE DONE**//
+//**FUNCTIONS PAGE DONE**//
 
 //Dependencies
 const express = require('express')
