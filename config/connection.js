@@ -12,10 +12,10 @@ const mysql = require("mysql");
 // });
 
 const connection = mysql.createConnection({
-  HOST: "us-cdbr-iron-east-02.cleardb.net",
-  USER: "b7e2437887xxxa",
-  PASSWORD: "0200xxx6",
-  DB: "heroku_7643ec736354xxx"
+  HOST: "us-cdbr-east-02.cleardb.com",
+  USER: "b8797704ed84f6",
+  PASSWORD: "6aabdc0e@",
+  DB: "heroku_b47f60853593882"
 });
 
 // DB connection
