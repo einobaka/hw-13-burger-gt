@@ -14,7 +14,11 @@ const burger = {
         });
     },
 
-    updateOne: function () { },
+    updateOne: function (id, status, cb) {
+        orm.updateOne('burgers', id, status, (res) => {
+             cb(res);
+        });
+    },
 
 }
 

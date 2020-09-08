@@ -9,7 +9,6 @@ const orm = {
             // console.log(res);
             cb(res);
         });
-
     },
 
     insertOne: function (table, col, val, cb) {
@@ -22,9 +21,16 @@ const orm = {
         })
     },
 
+    updateOne: function (table, id, status, cb) {
+        const dataq = `UPDATE ${table} SET devoured='${status}' WHERE id='${id}'`;
+        console.log(dataq);
+        connection.query(dataq, (err, res) => {
+            if (err) throw err;
+            // console.log(res);
+            cb(res)
+        })
 
-    updateOne: function () { },
-
+    },
 }
 
 module.exports = orm;

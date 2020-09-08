@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         const burg = {
             burger: data
         }
-        console.log(burg);
+        // console.log(burg);
         res.render('index', burg)
     })
 });
@@ -15,15 +15,18 @@ router.get('/', (req, res) => {
 router.post('/api/burgers', (req, res) => {
     // console.log(req.body)
     burger.insertOne(`burger_name, devoured`, [`${req.body.name}', '${req.body.devoured}`], (res) => {
-        res.json(console.log(res));
+        // console.log(res);
     })
-    // console.log(res)
 });
 
 router.put('/api/burgers/:id', (req, res) => {
 
+    const burgID = req.params.id;
+    const burgStatus = req.body.devoured;
 
+    burger.updateOne(burgID, burgStatus, (res) => {
+        // console.log(res);
+    });
 });
-
 
 module.exports = router;
