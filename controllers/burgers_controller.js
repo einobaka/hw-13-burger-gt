@@ -23,7 +23,6 @@ router.put('/api/burgers/:id', (req, res) => {
 
     const burgID = req.params.id;
     const burgStatus = req.body.devoured;
-
     burger.updateOne(burgID, burgStatus, (res) => {
         // console.log(res);
     });

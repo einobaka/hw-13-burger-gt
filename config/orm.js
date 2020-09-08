@@ -13,7 +13,7 @@ const orm = {
 
     insertOne: function (table, col, val, cb) {
         const dataq = `INSERT INTO ${table} (${col}) VALUES ('${val}')`
-        // console.log(dataq);
+        console.log(dataq);
         connection.query(dataq, (err, res) => {
             if (err) throw err;
             // console.log(res);
@@ -29,7 +29,6 @@ const orm = {
             // console.log(res);
             cb(res)
         })
-
     },
 }
 
